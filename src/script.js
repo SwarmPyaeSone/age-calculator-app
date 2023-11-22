@@ -1,10 +1,11 @@
 import "./style.css";
-import './assets/fonts/Poppins-Bold.tff';
-import './assets/fonts/Poppins-BoldItalic.tff';
-import './assets/fonts/Poppins-ExtraBold.tff';
-import './assets/fonts/Poppins-ExtraBoldItalic.tff';
-import './assets/fonts/Poppins-Italic.tff';
-import './assets/fonts/Poppins-Regular.tff';
+// import './assets/fonts/Poppins-Bold.tff';
+// import './assets/fonts/Poppins-BoldItalic.tff';
+// import './assets/fonts/Poppins-ExtraBold.tff';
+// import './assets/fonts/Poppins-ExtraBoldItalic.tff';
+// import './assets/fonts/Poppins-Italic.tff';
+// import './assets/fonts/Poppins-Regular.tff';
+// import './assets/fonts';
 
 import submitIcon from './assets/images/icon-arrow.svg';
 import InputValidation from "./input_validation.js";
