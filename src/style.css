@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('../assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-BoldItalic';
+  src: url('../assets/fonts/Poppins-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-ExtraBold';
+  src: url('../assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Extra-BoldItalic';
+  src: url('../assets/fonts/Poppins-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url('../assets/fonts/Poppins-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../assets/fonts/Poppins-Regular.ttf');
+}
+
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%); 
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 44%);
+  --neutral-off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--neutral-light-grey);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins-Regular', sans-serif;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.main-container {
+  background-color: var(--neutral-white);
+  border-radius: 20px 20px 30% 20px;
+  width: 50%;
+  padding: 3rem;
+}
+
+.input-fields-container {
+  margin: 1rem 0;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.input-fields {
+  padding: 0.8rem;
+  width: 150px;
+  border: 1px solid var(--neutral-smokey-grey);
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: 'Poppins-Bold', sans-serif;
+  cursor: pointer;
+  appearance: textfield; /*hide spinner firefox*/
+}
+
+/*hide arrow spinner Chrome, Safari, Edge, Opera*/
+.input-fields::-webkit-inner-spin-button,
+.input-fields::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-fields:focus {
+  border-color: var(--primary-purple);
+}
+
+.label-texts {
+  font-size: 0.8rem;
+  font-family: 'Poppins-Bold', sans-serif;
+  letter-spacing: 2px;
+  color: var(--neutral-smokey-grey);
+}
+
+.error-texts {
+  font-size: 0.8rem;
+  font-family: 'Poppins-Italic', sans-serif;
+  display: none;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.submit-line {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+hr {
+  display: inline-block;
+  width: 85%;
+}
+
+.submit-btn {
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: var(--primary-purple);
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: var(--neutral-off-black);
+}
+
+.result-text {
+  font-family: 'Poppins-Extra-BoldItalic', sans-serif;
+  font-size: 4rem;
+}
+
+.result-numbers {
+  color: var(--primary-purple);
+}
+
+.invalid {
+  color: var(--primary-light-red);
+  border-color: var(--primary-light-red);
+}
+
+@media screen and (max-width:1200px) {
+  .main-container{
+    width: 80%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .main-container{
+    width: 90%;
+  }
+
+  .input-fields {
+    width: 100px;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+  }
+
+  .input-fields-container {
+    margin: 3rem 0;
+  }
+
+  .label-texts {
+    font-size: 0.8rem;
+  }
+  
+  .error-texts {
+    font-size: 0.5rem;
+  }
+
+  .result-text {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width:575px) {
+  .main-container{
+    padding: 3rem 1rem;
+  }
+
+  .input-fields {
+    width: 70px;
+    font-size: 1rem;
+  }
+
+  .input-fields-container {
+    margin: 4rem 0;
+    justify-content: center;
+  }
+  
+  .error-texts {
+    margin-top: 0.8rem;
+  }
+
+  .submit-btn {
+    position: absolute;
+    left: 42%;
+    padding: 0.8rem;
+  }
+  
+  hr {
+    width: 100%;
+  }
+
+  .submit-line img {
+    width: 25px;
+  }
+
+  .result-text {
+    font-size: 2rem;
+  }
+
+  .result-container {
+    margin-top: 3rem;
+  }
+}

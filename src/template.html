@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../src/script.js" defer type="module"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <section class="main-container">
+      <form>
+        <div class="input-fields-container">
+          <div class="form-wrapper">
+            <label for="input-day" class="label-texts label-text-day"
+              >DAY</label
+            >
+            <input
+              type="number"
+              min="1"
+              max="31"
+              class="input-fields"
+              id="input-day"
+              value="31"
+              autocomplete="off"
+              required
+            />
+            <p class="error-texts error-text-day invalid">
+              Must be a valid day
+            </p>
+          </div>
+
+          <div class="form-wrapper">
+            <label for="input-month" class="label-texts label-text-month"
+              >MONTH</label
+            >
+            <input
+              type="number"
+              min="1"
+              max="12"
+              class="input-fields"
+              id="input-month"
+              value="12"
+              autocomplete="off"
+              required
+            />
+            <p class="error-texts error-text-month invalid">
+              Must be a valid month
+            </p>
+          </div>
+
+          <div class="form-wrapper">
+            <label for="input-year" class="label-texts label-text-year"
+              >YEAR</label
+            >
+            <input
+              type="number"
+              min="1800"
+              max="2023"
+              class="input-fields"
+              id="input-year"
+              value="1800"
+              autocomplete="off"
+              required
+            />
+            <p class="error-texts error-text-year invalid">
+              Must be in the past<br />yet not too far...
+            </p>
+          </div>
+        </div>
+
+        <div class="submit-line">
+          <hr />
+          <button type="submit" class="submit-btn">
+            <img
+              src="../assets/images/icon-arrow.svg"
+              alt="submit-arrow"
+              draggable="false"
+            />
+          </button>
+        </div>
+      </form>
+      <section class="result-container prevent-select">
+        <p class="result-text result-text-year">
+          <span class="result-numbers result-number-year">--</span> year(s)
+        </p>
+        <p class="result-text result-text-month">
+          <span class="result-numbers result-number-month">--</span> month(s)
+        </p>
+        <p class="result-text result-text-day">
+          <span class="result-numbers result-number-day">--</span> day(s)
+        </p>
+      </section>
+    </section>
+  </body>
+</html>
